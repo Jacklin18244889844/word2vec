@@ -4,10 +4,10 @@ This tool provides an efficient implementation of the continuous bag-of-words an
 
 Quick start
 ========
-Download the code: svn checkout http://word2vec.googlecode.com/svn/trunk/
-Run 'make' to compile word2vec tool
-Run the demo scripts: ./demo-word.sh and ./demo-phrases.sh
-For questions about the toolkit, see http://groups.google.com/group/word2vec-toolkit
+- ***Download the code: svn checkout http://word2vec.googlecode.com/svn/trunk/
+- ***Run 'make' to compile word2vec tool
+- ***Run the demo scripts: ./demo-word.sh and ./demo-phrases.sh
+- ***For questions about the toolkit, see http://groups.google.com/group/word2vec-toolkit
 How does it work
 ========
 The word2vec tool takes a text corpus as input and produces the word vectors as output. It first constructs a vocabulary from the training text data and then learns vector representation of words. The resulting word vector file can be used as features in many natural language processing and machine learning applications.
@@ -78,21 +78,21 @@ Performance
 ========
 The training speed can be significantly improved by using parallel training on multiple-CPU machine (use the switch '-threads N'). The hyper-parameter choice is crucial for performance (both speed and accuracy), however varies for different applications. The main choices to make are:
 
-architecture: skip-gram (slower, better for infrequent words) vs CBOW (fast)
-the training algorithm: hierarchical softmax (better for infrequent words) vs negative sampling (better for frequent words, better with low dimensional vectors)
-sub-sampling of frequent words: can improve both accuracy and speed for large data sets (useful values are in range 1e-3 to 1e-5)
-dimensionality of the word vectors: usually more is better, but not always
-context (window) size: for skip-gram usually around 10, for CBOW around 5
+- ***architecture: skip-gram (slower, better for infrequent words) vs CBOW (fast)
+- ***the training algorithm: hierarchical softmax (better for infrequent words) vs negative sampling (better for frequent words, better with low dimensional vectors)
+- ***sub-sampling of frequent words: can improve both accuracy and speed for large data sets (useful values are in range 1e-3 to 1e-5)
+- ***dimensionality of the word vectors: usually more is better, but not always
+- ***context (window) size: for skip-gram usually around 10, for CBOW around 5
 Where to obtain the training data
 ========
 The quality of the word vectors increases significantly with amount of the training data. For research purposes, you can consider using data sets that are available on-line:
 
-First billion characters from wikipedia (use the pre-processing perl script from the bottom of Matt Mahoney's page)
-Latest Wikipedia dump Use the same script as above to obtain clean text. Should be more than 3 billion words.
-WMT11 site: text data for several languages (duplicate sentences should be removed before training the models)
-Dataset from "One Billion Word Language Modeling Benchmark" Almost 1B words, already pre-processed text.
-UMBC webbase corpus Around 3 billion words, more info here. Needs further processing (mainly tokenization).
-Text data from more languages can be obtained at statmt.org and in the Polyglot project.
+- ***First billion characters from wikipedia (use the pre-processing perl script from the bottom of Matt Mahoney's page)
+- ***Latest Wikipedia dump Use the same script as above to obtain clean text. Should be more than 3 billion words.
+- ***WMT11 site: text data for several languages (duplicate sentences should be removed before training the models)
+- ***Dataset from "One Billion Word Language Modeling Benchmark" Almost 1B words, already pre-processed text.
+- ***UMBC webbase corpus Around 3 billion words, more info here. Needs further processing (mainly tokenization).
+- ***Text data from more languages can be obtained at statmt.org and in the Polyglot project.
 Pre-trained word and phrase vectors
 ========
 We are publishing pre-trained vectors trained on part of Google News dataset (about 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases. The phrases were obtained using a simple data-driven approach described in [2]. The archive is available here: GoogleNews-vectors-negative300.bin.gz.
@@ -114,8 +114,8 @@ Pre-trained entity vectors with Freebase naming
 ========
 We are also offering more than 1.4M pre-trained entity vectors with naming from Freebase. This is especially helpful for projects related to knowledge mining.
 
-Entity vectors trained on 100B words from various news articles: freebase-vectors-skipgram1000.bin.gz
-Entity vectors trained on 100B words from various news articles, using the deprecated /en/ naming (more easily readable); the vectors are sorted by frequency: freebase-vectors-skipgram1000-en.bin.gz
+- ***Entity vectors trained on 100B words from various news articles: freebase-vectors-skipgram1000.bin.gz
+- ***Entity vectors trained on 100B words from various news articles, using the deprecated /en/ naming (more easily readable); the vectors are sorted by frequency: freebase-vectors-skipgram1000-en.bin.gz
 Here is an example output of ./distance freebase-vectors-skipgram1000-en.bin:
 
 ``` Enter word or sentence (EXIT to break): /en/geoffrey_hinton
