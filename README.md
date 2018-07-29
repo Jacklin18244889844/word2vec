@@ -1,7 +1,9 @@
 Introduction
+========
 This tool provides an efficient implementation of the continuous bag-of-words and skip-gram architectures for computing vector representations of words. These representations can be subsequently used in many natural language processing applications and for further research.
 
 Quick start
+========
 Download the code: svn checkout http://word2vec.googlecode.com/svn/trunk/
 Run 'make' to compile word2vec tool
 Run the demo scripts: ./demo-word.sh and ./demo-phrases.sh
