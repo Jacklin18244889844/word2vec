@@ -8,6 +8,7 @@ Quick start
 - Run 'make' to compile word2vec tool
 - Run the demo scripts: ./demo-word.sh and ./demo-phrases.sh
 - For questions about the toolkit, see http://groups.google.com/group/word2vec-toolkit
+
 How does it work
 ========
 The word2vec tool takes a text corpus as input and produces the word vectors as output. It first constructs a vocabulary from the training text data and then learns vector representation of words. The resulting word vector file can be used as features in many natural language processing and machine learning applications.
